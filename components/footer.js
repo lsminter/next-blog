@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <div>
           <a className="hover:text-gray-600" href="https://github.com/lsminter">
-            <Image src="/github.svg" alt="Github Logo" width={72} height={16} />
+            <Image src="/github.png" alt="Github Logo" width={72} height={16} />
           </a>
         </div>
       </div>

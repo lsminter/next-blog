@@ -1,44 +1,34 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter'
-import Post from '../components/Post';
+import { getSortedPostsData } from '../lib/posts'
+import Head from "next/head";
+import Link from 'next/link'
+import { Container, Main, BlogTitle } from '../components/Styling';
 
-export default function Home({posts}) {
+
+const title = "My awesome blog";
+
+export default function Home() {
   return (
-    <div>
-      <main className="flex flex-col items-center justify-center flex-grow min-h-screen px-0 py-16">
-       <div>
-          {posts.map((post) => {
-            return <Post post={post}/>
-            
-          })}
-       </div>
-      </main>
-    </div>
-  )
+    <Container>
+      <Head>
+        <title>My awesome blog</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Main>
+        <BlogTitle className="title">{title}</BlogTitle>
+        <Link href="/posts">Checkout my posts</Link>
+      </Main>
+    </Container>
+  );
 }
 
-export async function getStaticProps() {
-  const files = fs.readdirSync(path.join('posts'))
-
-  const posts = files.map((filename) => {
-
-    const slug = filename.replace('.md', '')
-
-    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
-
-    const {data:frontmatter} = matter(markdownWithMeta)
-
-    return (
-      slug,
-      frontmatter
-    )
-
-  })
+export const getStaticProps = async () => {
+  const allPostsData = getSortedPostsData()
+  const posts = await allPostsData;
 
   return {
     props: {
       posts,
-    }
-  }
+    },
+  };
 }

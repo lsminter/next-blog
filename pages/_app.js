@@ -6,9 +6,9 @@ import Header from '../components/header'
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-    <Header />
-    <Component {...pageProps} />
-    <Footer />
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
     </div>
   )
 }
