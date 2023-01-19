@@ -1,12 +1,12 @@
-import Link from "next"
-
 export default function Header() {
   return (
-    <header className="flex border-b border-grey p-4 justify-between">
-      <p>I am a Dev Rel at egghead.io</p>
+    <header className="flex p-2 justify-between">
+      <div className="flex">
+        <a className="hover:text-blue-600 p-2" href="/">Lucas Minter</a>
+      </div>
       <div>
-        <a href="/posts">Posts</a>
-        <a className="hover:text-gray-600 p-2" href="/">Home</a>
+        <a className="hover:text-blue-600 p-2" href="/posts">Posts</a>
+        <a className="hover:text-blue-600 p-2" href="/">Home</a>
       </div>
     </header>
   )

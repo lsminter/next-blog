@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import twitterLogo from '../images/twitterLogo.png'
+import githubLogo from '../images/githubLogo.png'
 
 export default function Footer() {
   return(
@@ -9,12 +11,12 @@ export default function Footer() {
       <div className="flex">
         <div>
           <a className="hover:text-gray-600" href="https://twitter.com/LucasMinter2">
-          <Image src="/twitter.svg" alt="Twitter Logo" width={72} height={16} />
+            <Image src={twitterLogo} alt="Twitter Logo" width={30} height={30} />
           </a>
         </div>
         <div>
           <a className="hover:text-gray-600" href="https://github.com/lsminter">
-            <Image src="/github.png" alt="Github Logo" width={72} height={16} />
+            <Image src={githubLogo} alt="Github Logo" width={25} height={25} />
           </a>
         </div>
       </div>

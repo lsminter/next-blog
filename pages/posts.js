@@ -1,34 +1,50 @@
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import { Container, Main, List, ListItem } from '../components/Styling';
+import fetch from 'cross-fetch'
+import { server } from '../config'
+
+import { ApolloClient, InMemoryCache, gql, HttpLink } from '@apollo/client';
+
+import BlogList from '../components/bloglist';
 
 
 export default function Home({
-  posts,
+  posts
 }) {
   return (
-    <Container>
-      <Main>
-        <List>
-          {posts.map((post) => (
-            <ListItem key={post.id}>
-              <a className="hover:text-gray-600 text-2xl" href={`posts/${post.slug}`}>{post.title}</a>
-              <p>{post.description}</p>
-            </ListItem>
-          ))}
-        </List>
-      </Main>
-    </Container>
+    <div className='h-screen'>
+      <h2 className='pl-5 text-2xl'>Posts</h2>
+      <BlogList allBlogs={posts.posts}/>
+    </div>
   );
 }
 
 export const getStaticProps = async () => {
-  const allPostsData = getSortedPostsData()
-  const posts = await allPostsData;
+  const client = new ApolloClient({
+    link: new HttpLink({ uri: `${server}/graphql`, fetch }),
+    cache: new InMemoryCache
+  });
 
-  return {
+  const { data } = await client.query({
+    query: gql`
+      query {
+        posts {
+          data {
+            id
+            attributes {
+              author
+              date
+              slug
+              body
+              title
+            }
+          }
+        }
+      }
+    `
+  })
+
+  return { 
     props: {
-      posts,
+      posts: data
     },
-  };
+  }
 }
