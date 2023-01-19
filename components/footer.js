@@ -4,7 +4,7 @@ import githubLogo from '../images/githubLogo.png'
 
 export default function Footer() {
   return(
-    <footer className="w-full border-t border-grey p-4 flex items-center justify-between">
+    <footer className="w-full p-4 flex items-center justify-between bg-gradient-to-b bg-blue-100 to-blue-400">
       <div className="text-sm items-center">
         Lucas Minter ©{new Date().getFullYear()}
       </div>

@@ -10,7 +10,7 @@ export default function Home({
   posts
 }) {
   return (
-    <div className='h-screen'>
+    <div className='h-screen place-content-center'>
       <h2 className='pl-5 text-2xl'>Posts</h2>
       <BlogList allBlogs={posts.posts}/>
     </div>

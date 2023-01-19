@@ -14,7 +14,7 @@ const BlogList = ({ allBlogs }) => {
         {allBlogs.data.map(post => (
           <div key={post.attributes.slug}>
             <Link href={{ pathname: `/posts/${post.attributes.slug}` }} passHref>
-              <h2 className="border-solid border m-4 p-6 text-left no-underline hover:border-cyan-800 hover:text-cyan-800 rounded-xl">
+              <h2 className="grid border-solid border border-cyan-400 m-4 p-6 text-left no-underline hover:border-cyan-800 hover:text-cyan-800 rounded-xl">
                   {post.attributes.title}
                 <p>
                   by {post.attributes.author} on {reformatDate(post.attributes.date)}
