@@ -1,4 +1,4 @@
-const client = require('./client')
+const client = require('./client.js')
 
 module.exports = {
   // Make sure that your node enviroment supports async/await
