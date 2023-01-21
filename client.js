@@ -1,4 +1,4 @@
-import sanityClient from '@sanity/client'
+const sanityClient = require('@sanity/client')
 
 export default sanityClient({
   projectId: '0zxiq0ro', // you can find this in sanity.json
