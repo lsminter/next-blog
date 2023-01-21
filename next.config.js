@@ -1,6 +1,10 @@
 const client = require('./client.js')
 
 module.exports = {
+  images: {
+    loader: 'akamai',
+    path: ''
+  },
   // Make sure that your node enviroment supports async/await
   exportPathMap: async function (defaultPathMap) {
   
