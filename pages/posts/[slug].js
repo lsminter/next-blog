@@ -1,10 +1,11 @@
 import client from '../../client'
 import Link from 'next/link'
+import groq from 'groq'
 
 import {marked} from 'marked'
 
-export default function Blog({ post }) {
-  const html = marked(post.body)
+export default function Blog({ post = [] }) {
+  const html = marked(post?.body)
   return (
     <div className='prose mx-auto max-w-4x1'>
       <h1 className='text-center text-3xl'>
@@ -23,29 +24,27 @@ export default function Blog({ post }) {
 
 export async function getStaticProps({params}) {
   const {slug} = params
-  const post = `*[_type == "post" && slug.current == "${slug}"] [0]{
+  const post = await client.fetch(groq`*[_type == "post" && slug.current == "${slug}"] [0]{
     title,
     author->,
     body,
     publishedAt,
     slug
-  }`;
-  const data = await client.fetch(post)
+  }`);
   return {
     props: {
-      post: data
+      post: post
     }
   }
 }
 
 
 export async function getStaticPaths() {
-  const paths = `
+  const paths = await client.fetch(groq`
     *[_type == "post" && defined(slug.current)][].slug.current
-  `
-  const data = await client.fetch(paths)
+  `)
   return {
-    paths: data.map((slug) => ({params: {slug}})),
-    fallback: true,
+    paths: paths.map((slug) => ({params: {slug}})),
+    fallback: false,
   }
 }
