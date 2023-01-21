@@ -34,7 +34,8 @@ export async function getStaticProps({params}) {
   return {
     props: {
       post: post
-    }
+    },
+    revalidate: 60
   }
 }
 
@@ -45,6 +46,6 @@ export async function getStaticPaths() {
   `)
   return {
     paths: paths.map((slug) => ({params: {slug}})),
-    fallback: false,
+    fallback: 'blocking',
   }
 }

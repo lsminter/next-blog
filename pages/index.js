@@ -5,8 +5,8 @@ import profilePicture from '../images/profilePicture.png'
 export default function Home() {
   return (
     <div className="h-screen">
-      <div className="grid">
-        <div className='flex w-full p-2 justify-between'>
+      <div className="grid place-items-center">
+        <div className='flex w-3/4 p-2 justify-between'>
           <div className='flex flex-col m-4 place-items-center'>
             <text className="m-4 p-6 no-underline text-2xl align-top">My Blog</text>
             <text className='m-4 p-6 no-underline text-l align-top'>This blog is a place to dump my thoughts on different things.</text>
