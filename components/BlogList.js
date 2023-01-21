@@ -8,6 +8,8 @@ const BlogList = ({ allBlogs }) => {
     return date.toDateString().slice(4)
   }
 
+  console.log(allBlogs)
+
   return (
     <>
       <div className="flex items-center justify-center flex-wrap">
