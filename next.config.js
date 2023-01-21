@@ -19,7 +19,7 @@ module.exports = {
           (acc, slug) => ({
             '/': { page: '/' },
             ...acc,
-            [`/blog/${slug}`]: { page: '/blog', query: { slug } }
+            [`/posts/${slug}`]: { page: '/posts', query: { slug } }
           }),
           {}
         )
