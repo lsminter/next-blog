@@ -19,7 +19,6 @@ export default function Blog({ post }) {
       <article dangerouslySetInnerHTML={{__html: html}} />
     </div>
   )
-
 }
 
 export async function getStaticProps({params}) {
