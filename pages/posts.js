@@ -32,7 +32,7 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const post = await client.fetch(groq`*[_type == "post"] | order(_createdAt asc,) {
+  const post = await client.fetch(groq`*[_type == "post"] | order(_createdAt desc,) {
     title,
     author->,
     category,
