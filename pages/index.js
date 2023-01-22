@@ -19,6 +19,11 @@ export default function Home() {
         </div>
       </div>
       <div className='grid place-content-center'>
+        <text className='m-4 p-6 no-underline text-l align-top'>
+          The best way to contact me is either email: lsminteris@gmail.com or on discord: minterhero#5898.
+        </text>
+      </div>
+      <div className='grid place-content-center'>
         <a className="grid border-solid border border-cyan-400 m-4 p-6 text-left no-underline hover:border-cyan-800 hover:text-cyan-800 rounded-xl" href="/posts">Checkout my posts</a>
       </div>
     </div>
