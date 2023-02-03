@@ -4,7 +4,7 @@ import githubLogo from '../images/githubLogo.png'
 
 export default function Footer() {
   return(
-    <footer className="flex justify-between pt-10">
+    <footer className="flex justify-between mt-4">
       <div className="text-sm items-center">
         Lucas Minter ©{new Date().getFullYear()}
       </div>
