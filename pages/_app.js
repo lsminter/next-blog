@@ -5,7 +5,7 @@ import Header from '../components/header'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className='bg-blue-100 [@media(max-width:767px)]:scrollbar-hide'>
+    <div className='px-32 bg-background'>
       <Header />
       <Component {...pageProps} />
       <Footer />
