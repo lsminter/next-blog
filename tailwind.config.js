@@ -6,7 +6,8 @@ module.exports = {
       s: '12px',
       m: '16px',
       l: '32px',
-      xl: '64px'
+      xl: '64px',
+      smHeader: '50px'
     },
     extend: {
       colors: {
