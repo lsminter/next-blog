@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <div className='px-32 bg-background'>
       <Header />
       <Component {...pageProps} />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

@@ -1,12 +1,13 @@
 export default function Header() {
   return (
-    <header className="flex p-2 justify-between">
+    <header className="flex justify-between">
       <div className="flex">
-        <a className="hover:text-blue-600 p-2" href="/">Lucas Minter</a>
+        <a className="hover:text-blue-600 pt-2" href="/">Lucas Minter</a>
       </div>
-      <div>
-        <a className="hover:text-blue-600 p-2" href="/posts">Posts</a>
-        <a className="hover:text-blue-600 p-2" href="/">Home</a>
+      <div className="pt-2">
+        <a className="hover:text-blue-600 px-2" href="/components">Components</a>
+        <a className="hover:text-blue-600 px-2" href="/posts">Posts</a>
+        <a className="hover:text-blue-600 pl-2" href="/">Home</a>
       </div>
     </header>
   )

@@ -13,15 +13,15 @@ export default function Home() {
           A blog for me to put my thoughts
         </div>
       </div>
-      <div className='mt-10 px-4 pb-4 bg-gray-200 rounded-lg'>
+      <div className='grid grid-cols-8 mt-10 px-4 pb-4 rounded-lg'>
         <div className='text-l'>
           Bio
         </div>
-        <div>
-          <div className='m'>
-            I'm 28 years old and a web developer living in Washington State. I mainly use JavaScript, Next.js and TailwindCSS. I worked for egghead.io for 5 1/2 years. I specialize in professional content creation in the tech world. I also helped manage egghead's social media accounts and creating image assets for upcoming courses. A couple of my main projects are this blog and creating discord bots.
-          </div>
-          <Image src={profilePicture} alt="cooking image" />
+        <div className='text-m col-start-1 col-end-6'>
+          I'm 28 years old and a web developer living in Washington State. I mainly use JavaScript, Next.js and TailwindCSS. I worked for egghead.io for 5 1/2 years. I specialize in professional content creation in the tech world. I also helped manage egghead's social media accounts and creating image assets for upcoming courses. A couple of my main projects are this blog and creating discord bots.
+        </div>
+        <div className='col-start-7 col-end-8'>
+          <Image src={profilePicture} alt="cooking image" className='rounded-lg' />
         </div>
       </div>
     </div>
