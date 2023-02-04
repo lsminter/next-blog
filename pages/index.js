@@ -4,7 +4,7 @@ import profilePicture from '../images/profilePicture.png'
 
 export default function Home() {
   return (
-    <div className='h-screen mt-4'>
+    <div className='min-h-screen mt-4'>
       <div className='grid grid-cols-1 sm:grid-cols-3 sm:items-center'>
         <div className='max-w-sm m-auto opacity-90 sm:hidden sm:bg-cover bg-gradient-to-r from-background to-opacity-0'> 
           <Image src={cookingImage} alt="cooking image" className='rounded-md'/>
