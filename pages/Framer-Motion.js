@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
-export default function Components() {
+export default function FramerMotion() {
   return (
-    <main className="grid h-screen">
+    <main className="grid min-h-screen">
       <div>
         <div>
           <div className="flex justify-center flex-wrap">
