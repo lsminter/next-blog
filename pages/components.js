@@ -2,11 +2,11 @@ import { motion } from 'framer-motion'
 
 export default function Components() {
   return (
-    <div className="grid h-screen">
+    <motion.main className="grid h-screen">
       <div>
         <div>
           <div className="flex justify-center flex-wrap">
-            A list of components that I've made or like to use. 
+            Having fun with Framer Motion!
           </div>
         </div>
       </div>
@@ -29,6 +29,6 @@ export default function Components() {
       <div>
         another component
       </div>
-    </div>
+    </motion.main>
   )
 }
