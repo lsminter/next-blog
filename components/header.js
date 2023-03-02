@@ -5,7 +5,7 @@ export default function Header() {
         <a className="hover:text-blue-600 pt-2" href="/">Lucas Minter</a>
       </div>
       <div className="pt-2">
-        <a className="hover:text-blue-600 px-2" href="/components">Components</a>
+        <a className="hover:text-blue-600 px-2" href="/Framer-Motion">Framer Motion</a>
         <a className="hover:text-blue-600 px-2" href="/posts">Posts</a>
         <a className="hover:text-blue-600 pl-2" href="/">Home</a>
       </div>

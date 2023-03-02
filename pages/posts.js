@@ -2,7 +2,7 @@ import client from '../client'
 import Link from 'next/link'
 import groq from 'groq'
 
-export default function Home({
+export default function Posts({
   post
 }) {
 
@@ -36,7 +36,6 @@ export async function getStaticProps() {
     title,
     author->,
     category,
-    body,
     publishedAt,
     slug
   }`);
