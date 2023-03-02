@@ -36,7 +36,6 @@ export async function getStaticProps() {
     title,
     author->,
     category,
-    body,
     publishedAt,
     slug
   }`);
