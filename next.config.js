@@ -1,6 +1,7 @@
 const client = require('./client.js')
 
 module.exports = {
+  distDir: 'build',
   images: {
     loader: 'akamai',
     path: ''
