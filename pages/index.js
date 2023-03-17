@@ -17,21 +17,31 @@ export default function Home() {
         </h1>
       </div>
       <div className='grid sm:grid-cols-4 sm:items-center sm:mt-10 bg-gray-200 p-4 rounded-lg'>
-          <div className='max-w-sm m-auto sm:hidden'> 
-            <Image src={profilePicture} alt="cooking image" className='rounded-md'/>
-          </div>
-          <div className='text-center items-center sm:text-left sm:col-span-3'>
-            <h1 className='my-4 no-underline text-l align-top'>
-              Bio
-            </h1>
-            <div className='text-m'>
-              I'm 28 years old and a web developer living in Washington State. I mainly use JavaScript, Next.js and TailwindCSS. I worked for egghead.io for 5 1/2 years. I specialize in professional content creation in the tech world. I also helped manage egghead's social media accounts and creating image assets for upcoming courses. A couple of my main projects are this blog and creating discord bots.
-            </div>
-          </div>
-          <div className='max-w-md hidden sm:block col-start-4'>
-            <Image src={profilePicture} alt="cooking image" className='rounded-lg' />
+        <div className='max-w-sm m-auto sm:hidden'> 
+          <Image src={profilePicture} alt="cooking image" className='rounded-md'/>
+        </div>
+        <div className='text-center items-center sm:text-left sm:col-span-3'>
+          <h1 className='my-4 no-underline text-l align-top'>
+            Bio
+          </h1>
+          <div className='text-m'>
+            I'm 28 years old and a web developer living in Washington State. I mainly use JavaScript, Next.js and TailwindCSS. I worked for egghead.io for 5 1/2 years. I specialize in professional content creation in the tech world. I also helped manage egghead's social media accounts and creating image assets for upcoming courses. A couple of my main projects are this blog and creating discord bots.
           </div>
         </div>
+        <div className='max-w-md hidden sm:block col-start-4'>
+          <Image src={profilePicture} alt="cooking image" className='rounded-lg' />
+        </div>
+      </div>
+      <div className="py-5">
+        <a 
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          target="_blank"
+          href='/files/LinkedIn-Resume-Lucas-Minter.pdf' 
+          rel="noopener noreferrer"
+        >
+        Download Resume
+        </a>
+      </div>
     </div>
   );
 }

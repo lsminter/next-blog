@@ -1,3 +1,7 @@
+/**
+ * @type {import('next').NextConfig}
+*/
+
 const client = require('./client.js')
 
 module.exports = {
