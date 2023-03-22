@@ -7,4 +7,3 @@ node_modules
 .netlify
 out/
 yarn.lock
-build/
