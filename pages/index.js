@@ -32,7 +32,7 @@ export default function Home() {
           <Image src={profilePicture} alt="cooking image" className='rounded-lg' />
         </div>
       </div>
-      <div style={{ position: "relative", paddingBottom: "50px" }}>
+      <div style={{ position: "relative", paddingBottom: "50px" }} className="hover:text-blue-500">
         <a href="https://www.lucasminter.dev/posts/create-a-book-club-bot-using-discord-js-v14">
           <div className="grid sm:grid-cols-4 mt-10 sm:items-center sm:mt-10 bg-gray-200 p-4 rounded-lg">
             <div className="max-w-sm m-auto sm:hidden">
