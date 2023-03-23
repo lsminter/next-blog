@@ -25,7 +25,7 @@ export default function Home() {
             Bio
           </h1>
           <div className='text-m'>
-            I'm 28 years old and a web developer living in Washington State. I mainly use JavaScript, Next.js and TailwindCSS. I worked for egghead.io for 5 1/2 years. I specialize in professional content creation in the tech world. I also helped manage egghead's social media accounts and creating image assets for upcoming courses. A couple of my main projects are this blog and creating discord bots.
+            As a web developer residing in Washington State, I have accumulated 5 1/2 years of experience working for egghead.io. My primary areas of expertise include JavaScript, Next.js, TailwindCSS, and Sanity.io. I am particularly skilled in creating high-quality video content in the technology sector. During my tenure at egghead.io, I have demonstrated my proficiency by successfully managing social media accounts and creating image assets for upcoming courses. A couple of my major projects are this blog and creating my own egghead.io course on building your own bot using Discord.js.          
           </div>
         </div>
         <div className='max-w-md hidden sm:ml-4 sm:block col-start-4'>
