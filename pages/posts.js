@@ -13,7 +13,10 @@ export default function Posts({
 
   return (
     <>
-      <div className="flex h-screen items-center justify-center flex-wrap">
+      <h1 className="text-xl text-center">
+        All Posts
+      </h1>
+      <div className="flex h-screen justify-center">
         {post.map(post => (
           <div key={post.slug}>
             <Link href={{ pathname: `/posts/${post.slug.current}` }} passHref>

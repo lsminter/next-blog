@@ -12,7 +12,7 @@ export default function Home() {
         <div className='hidden sm:block col-start-3 min-w-sm max-w-sm opacity-90 bg-cover bg-gradient-to-r from-background to-opacity-0'> 
           <Image src={cookingImage} alt="cooking image" className='object-cover mix-blend-overlay rounded-md'/>
         </div>
-        <h1 className='max-w-lg m-auto sm:absolute sm:max-w-md sm:col-span-2 first-line:sm:max-w-lg text-smHeader sm:text-xl text-transparent bg-clip-text bg-gradient-to-br from-title-start to-title-end'>
+        <h1 className='max-w-lg m-auto sm:absolute sm:max-w-md sm:col-span-2 first-line:sm:max-w-lg text-center text-l sm:text-xl text-transparent bg-clip-text bg-gradient-to-br from-title-start to-title-end'>
           A blog for me to put my thoughts
         </h1>
       </div>
@@ -21,7 +21,7 @@ export default function Home() {
           <Image src={profilePicture} alt="cooking image" className='rounded-md'/>
         </div>
         <div className='text-center items-center sm:text-left sm:col-span-3'>
-          <h1 className='my-4 no-underline text-l align-top'>
+          <h1 className='mb-4 no-underline text-l text-center align-top'>
             Bio
           </h1>
           <div className='text-m'>
