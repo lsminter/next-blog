@@ -48,7 +48,7 @@ export default function Home() {
                 Create a Book Club Bot using Discord.js v14
               </h1>
               <div className="text-m">
-                In this tutorial, I will guide you through creating your first Discord bot. We will begin by setting up our bot in the Discord developer portal, followed by setting up the bot locally. I will teach you how to develop a basic chatbot, and then we will dive into creating slash commands with more detail. Finally, we will deploy the bot to ensure it runs continuously.
+                In this tutorial, I will guide you through creating your first Discord bot. We will begin by setting up our bot in the Discord developer portal, followed by setting up the bot locally. I will teach you how to develop a basic chatbot, and then we will dive into creating slash commands with more detail. Finally, we will deploy the bot to ensure it runs continuously. CLICK TO READ MORE ->
               </div>
             </div>
             <div className="max-w-md hidden sm:block sm:col-start-1 sm:row-start-1 sm:mr-4">
@@ -62,12 +62,6 @@ export default function Home() {
             </div>
           </div>
         </a>
-        <button
-          className="absolute bottom-0 right-0 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={() => window.open("https://www.lucasminter.dev/posts/create-a-book-club-bot-using-discord-js-v14")}
-        >
-          Read More
-        </button>
       </div>
       <div className="py-5">
         <a 
