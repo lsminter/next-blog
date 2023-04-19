@@ -9,7 +9,7 @@ export default function Footer() {
       </div>
       <div className="flex">
         <div>
-          <a className="hover:text-gray-600" href="https://twitter.com/LucasMinter2">
+          <a className="hover:text-gray-600" href="https://twitter.com/lucasminter">
             <Image src={'/images/twitterLogo.png'} alt="Twitter Logo" width={30} height={30} />
           </a>
         </div>
