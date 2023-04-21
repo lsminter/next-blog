@@ -73,7 +73,7 @@ export default function Home({post}) {
         </a>
       </div>
       <div>
-        <h2 className="text-l">Blog Posts</h2>
+        <h2 className="text-l">Recent Blog Posts</h2>
         <div className="flex justify-center">
         {post.map(post => (
           <div key={post.slug}>
