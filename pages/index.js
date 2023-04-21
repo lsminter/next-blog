@@ -1,7 +1,16 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import client from '../client'
+import groq from 'groq'
 
 
-export default function Home() {
+export default function Home({post}) {
+  
+  function reformatDate(fullDate) {
+    const date = new Date(fullDate)
+    return date.toDateString().slice(4)
+  }
+
   return (
     <div className='min-h-screen mt-4'>
       <div className='grid grid-cols-1 sm:grid-cols-3 sm:items-center'>
@@ -32,7 +41,7 @@ export default function Home() {
         </div>
       </div>
       <div style={{ position: "relative", paddingBottom: "50px" }}>
-        <a href="https://www.lucasminter.dev/posts/create-a-book-club-bot-using-discord-js-v14" className="hover:text-blue-500">
+        <a href="https://www.lucasminter.dev/posts/create-a-book-club-bot-using-discord-js-v14" className="hover:text-cyan-800">
           <div className="grid sm:grid-cols-4 mt-10 sm:items-center sm:mt-10 bg-gray-200 p-4 rounded-lg">
             <div className="max-w-sm m-auto sm:hidden">
               <Image
@@ -63,6 +72,23 @@ export default function Home() {
           </div>
         </a>
       </div>
+      <div>
+        <h2 className="text-l">Blog Posts</h2>
+        <div className="flex justify-center">
+        {post.map(post => (
+          <div key={post.slug}>
+            <Link href={{ pathname: `/posts/${post.slug.current}` }} passHref>
+              <h2 className="grid m-2 p-6 text-left no-underline bg-gray-200 hover:border-cyan-800 hover:text-cyan-800 rounded-xl">
+                  {post.title}
+                <p>
+                  by {post.author.name} on {reformatDate(post.publishedAt)}
+                </p>
+              </h2>
+            </Link>
+          </div>
+        ))}
+      </div>
+      </div>
       <div className="py-5">
         <a 
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -75,4 +101,19 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const post = await client.fetch(groq`*[_type == "post"] | order(_createdAt desc)[0..2] {
+    title,
+    author->,
+    category,
+    publishedAt,
+    slug
+  }`);
+  return {
+    props: {
+      post: post
+    }
+  }
 }

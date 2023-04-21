@@ -1,6 +1,6 @@
 import client from '../client'
 import Link from 'next/link'
-import groq from 'groq'
+import postsFetch from './api/postsFetch'
 
 export default function Posts({
   post
@@ -35,13 +35,7 @@ export default function Posts({
 }
 
 export async function getStaticProps() {
-  const post = await client.fetch(groq`*[_type == "post"] | order(_createdAt desc,) {
-    title,
-    author->,
-    category,
-    publishedAt,
-    slug
-  }`);
+  const post = await client.fetch(postsFetch);
   return {
     props: {
       post: post
