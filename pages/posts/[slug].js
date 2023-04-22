@@ -14,7 +14,7 @@ export default function Blog({ post = [] }) {
       <h4 className='my-4 text-center'>by {post.author.name}</h4>
       <p className='my-4 text-center'>
         <Link href='/posts'>
-          &larr; go back to all posts
+          &larr; go back to all posts 
         </Link>
       </p>
       <article dangerouslySetInnerHTML={{__html: html}} />
