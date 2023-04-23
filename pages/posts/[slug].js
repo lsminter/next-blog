@@ -17,7 +17,7 @@ export default function Blog({ post = [] }) {
           &larr; go back to all posts 
         </Link>
       </p>
-      <article dangerouslySetInnerHTML={{__html: html}} />
+      <article className="overflow-hidden" dangerouslySetInnerHTML={{__html: html}} />
     </div>
   )
 }

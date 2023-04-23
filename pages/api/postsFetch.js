@@ -5,7 +5,9 @@ const postsFetch = groq`*[_type == "post"] | order(_createdAt desc,) {
   author->,
   category,
   publishedAt,
-  slug
+  slug,
+  body,
+  summary
 }`
 
 export default postsFetch;

@@ -73,15 +73,20 @@ export default function Home({post}) {
         </a>
       </div>
       <div>
-        <h2 className="text-l">Latest Blog Posts</h2>
-        <div className="flex justify-center">
+        <h2 className="text-l text-center">Latest Blog Posts</h2>
+        <div className="sm:block md:grid md:grid-cols-3">
         {post.map(post => (
           <div key={post.slug}>
             <Link href={{ pathname: `/posts/${post.slug.current}` }} passHref>
-              <h2 className="grid m-2 p-6 text-left no-underline bg-gray-200 hover:border-cyan-800 hover:text-cyan-800 rounded-xl">
+              <h2 className="border-solid border bg-gray-200 m-4 p-4 text-left no-underline hover:border-cyan-800 hover:text-cyan-800 rounded-xl md:h-32 lg:h-28">
+                <p className="font-bold">
                   {post.title}
+                </p>
                 <p>
-                  by {post.author.name} on {reformatDate(post.publishedAt)}
+                  {reformatDate(post.publishedAt)}
+                </p>
+                <p>
+                {post.summary}
                 </p>
               </h2>
             </Link>
