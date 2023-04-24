@@ -78,7 +78,7 @@ export default function Home({post}) {
         {post.map(post => (
           <div key={post.slug}>
             <Link href={{ pathname: `/posts/${post.slug.current}` }} passHref>
-              <h2 className="border-solid border bg-gray-200 m-4 p-4 text-left no-underline hover:border-cyan-800 hover:text-cyan-800 rounded-xl md:h-32 lg:h-28">
+              <h2 className="border-solid border bg-gray-200 m-4 p-4 text-left no-underline hover:border-cyan-800 hover:text-cyan-800 rounded-xl">
                 <p className="font-bold">
                   {post.title}
                 </p>
