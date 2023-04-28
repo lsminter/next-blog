@@ -45,7 +45,7 @@ export default function Home({post}) {
           <div className="grid sm:grid-cols-4 mt-10 sm:items-center sm:mt-10 bg-gray-200 p-4 rounded-lg">
             <div className="max-w-sm m-auto sm:hidden">
               <Image
-                src="/images/discordCourseImage.webp"
+                src="/images/bookclubbotcourseimage.webp"
                 alt="discord course image"
                 width="200"
                 height="200"
@@ -62,7 +62,7 @@ export default function Home({post}) {
             </div>
             <div className="max-w-md hidden sm:block sm:col-start-1 sm:row-start-1 sm:mr-4">
               <Image
-                src="/images/discordCourseImage.webp"
+                src="/images/bookclubbotcourseimage.webp"
                 alt="discord course image"
                 width="200"
                 height="200"
