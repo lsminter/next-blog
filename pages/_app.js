@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className='h-full px-4 sm:px-12 bg-background'>
       <Header />
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSV8NJ1KXL" />
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXP421LJ7Y" />
       <Component {...pageProps} />
       <Footer />
       <Analytics />
